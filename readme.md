@@ -1,6 +1,18 @@
 #Rjsliders Plugin
 Create a slideshow in your website using **high performance**, touch responsive sliders.
 
+####Features
+* **Touch responsive**
+* **Light weight**
+* **No JQuery** used
+* **17 transaction effects**
+* **Touchpad** scrolling
+* **Multiple** slideshows on same page
+* **Image fill modes**
+* **Keyboard arrow key navigation**
+* **Horizontal** and **vertical** drag orientation
+* **Bullet** and **arrow** navigators with custom direction
+
 #How do this work
 The plugin provides `advanced` slider component to build slideshow with advance settings, through which you can create your own style sliders.
 
