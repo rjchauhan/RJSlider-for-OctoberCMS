@@ -31,6 +31,7 @@ The component has the following properties:
 * **Lanes** - Specify lanes to arrange items, default value is `1`.
 
 The next example shows usage of `advanced` component:
+
 	title = "Demonstration"
 	url = "/"
 	layout = "default"
