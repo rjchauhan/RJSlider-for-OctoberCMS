@@ -1,4 +1,4 @@
-#Rjsliders Plugin
+#RJ Slider Plugin
 Create a slideshow in your website using **high performance**, touch responsive sliders.
 
 ####Features
