@@ -1,0 +1,167 @@
+<script>
+    jssor_{{ __SELF__ }}_starter = function (containerId) {
+        {% if transaction != 0 %}
+        var _SlideshowTransitions = [
+            {% if transaction==1 or transaction==2 %}
+                //Fade Twins
+                { $Duration: 700, $Opacity: 2, $Brother: { $Duration: 1000, $Opacity: 2 } },
+            {% endif %}
+            {% if transaction==1 or transaction==3 %}
+            //Rotate Overlap
+                { $Duration: 1200, $Zoom: 11, $Rotate: -1, $Easing: { $Zoom: $JssorEasing$.$EaseInQuad, $Opacity: $JssorEasing$.$EaseLinear, $Rotate: $JssorEasing$.$EaseInQuad }, $Opacity: 2, $Round: { $Rotate: 0.5 }, $Brother: { $Duration: 1200, $Zoom: 1, $Rotate: 1, $Easing: $JssorEasing$.$EaseSwing, $Opacity: 2, $Round: { $Rotate: 0.5 }, $Shift: 90 } },
+            {% endif %}
+            {% if transaction==1 or transaction==4 %}
+            //Switch
+                { $Duration: 1400, $Zoom: 1.5, $FlyDirection: 1, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Zoom: $JssorEasing$.$EaseInSine }, $ScaleHorizontal: 0.25, $Opacity: 2, $ZIndex: -10, $Brother: { $Duration: 1400, $Zoom: 1.5, $FlyDirection: 2, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Zoom: $JssorEasing$.$EaseInSine }, $ScaleHorizontal: 0.25, $Opacity: 2, $ZIndex: -10 } },
+            {% endif %}
+            {% if transaction==1 or transaction==5 %}
+            //Rotate Relay
+                { $Duration: 1200, $Zoom: 11, $Rotate: 1, $Easing: { $Opacity: $JssorEasing$.$EaseLinear, $Rotate: $JssorEasing$.$EaseInQuad }, $Opacity: 2, $Round: { $Rotate: 1 }, $ZIndex: -10, $Brother: { $Duration: 1200, $Zoom: 11, $Rotate: -1, $Easing: { $Opacity: $JssorEasing$.$EaseLinear, $Rotate: $JssorEasing$.$EaseInQuad }, $Opacity: 2, $Round: { $Rotate: 1 }, $ZIndex: -10, $Shift: 600 } },
+            {% endif %}
+            {% if transaction==1 or transaction==6 %}
+            //Doors
+                { $Duration: 1500, $Cols: 2, $FlyDirection: 1, $ChessMode: { $Column: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInOutCubic }, $ScaleHorizontal: 0.5, $Opacity: 2, $Brother: { $Duration: 1500, $Opacity: 2 } },
+            {% endif %}
+            {% if transaction==1 or transaction==7 %}
+            //Rotate in+ out-
+                { $Duration: 1500, $Zoom: 1, $Rotate: 0.1, $During: { $Left: [0.6, 0.4], $Top: [0.6, 0.4], $Rotate: [0.6, 0.4], $Zoom: [0.6, 0.4] }, $FlyDirection: 6, $Easing: { $Left: $JssorEasing$.$EaseInQuad, $Top: $JssorEasing$.$EaseInQuad, $Opacity: $JssorEasing$.$EaseLinear, $Rotate: $JssorEasing$.$EaseInQuad }, $ScaleHorizontal: 0.3, $ScaleVertical: 0.5, $Opacity: 2, $Brother: { $Duration: 1000, $Zoom: 11, $Rotate: -0.5, $Easing: { $Opacity: $JssorEasing$.$EaseLinear, $Rotate: $JssorEasing$.$EaseInQuad }, $Opacity: 2, $Shift: 200 } },
+            {% endif %}
+            {% if transaction==1 or transaction==8 %}
+            //Fly Twins
+                { $Duration: 1500, $During: { $Left: [0.6, 0.4] }, $FlyDirection: 1, $Easing: { $Left: $JssorEasing$.$EaseInQuad, $Opacity: $JssorEasing$.$EaseLinear }, $ScaleHorizontal: 0.3, $Opacity: 2, $Outside: true, $Brother: { $Duration: 1000, $FlyDirection: 2, $Easing: { $Left: $JssorEasing$.$EaseInQuad, $Opacity: $JssorEasing$.$EaseLinear }, $ScaleHorizontal: 0.3, $Opacity: 2 } },
+            {% endif %}
+            {% if transaction==1 or transaction==9 %}
+            //Rotate in- out+
+                { $Duration: 1500, $Zoom: 11, $Rotate: 0.5, $During: { $Left: [0.4, 0.6], $Top: [0.4, 0.6], $Rotate: [0.4, 0.6], $Zoom: [0.4, 0.6] }, $Easing: { $Opacity: $JssorEasing$.$EaseLinear, $Rotate: $JssorEasing$.$EaseInQuad }, $ScaleHorizontal: 0.3, $ScaleVertical: 0.5, $Opacity: 2, $Brother: { $Duration: 1000, $Zoom: 1, $Rotate: -0.5, $Easing: { $Opacity: $JssorEasing$.$EaseLinear, $Rotate: $JssorEasing$.$EaseInQuad }, $Opacity: 2, $Shift: 200 } },
+            {% endif %}
+            {% if transaction==1 or transaction==10 %}
+            //Rotate Axis up overlap
+                { $Duration: 1200, $Rotate: -0.1, $FlyDirection: 5, $Easing: { $Left: $JssorEasing$.$EaseInQuad, $Top: $JssorEasing$.$EaseInQuad, $Opacity: $JssorEasing$.$EaseLinear, $Rotate: $JssorEasing$.$EaseInQuad }, $ScaleHorizontal: 0.25, $ScaleVertical: 0.5, $Opacity: 2, $Brother: { $Duration: 1200, $Rotate: 0.1, $FlyDirection: 10, $Easing: { $Left: $JssorEasing$.$EaseInQuad, $Top: $JssorEasing$.$EaseInQuad, $Opacity: $JssorEasing$.$EaseLinear, $Rotate: $JssorEasing$.$EaseInQuad }, $ScaleHorizontal: 0.1, $ScaleVertical: 0.7, $Opacity: 2 } },
+            {% endif %}
+            {% if transaction==1 or transaction==11 %}
+            //Chess Replace TB
+                { $Duration: 1600, $Rows: 2, $FlyDirection: 1, $ChessMode: { $Row: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInOutQuart, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Brother: { $Duration: 1600, $Rows: 2, $FlyDirection: 2, $ChessMode: { $Row: 3 }, $Easing: { $Left: $JssorEasing$.$EaseInOutQuart, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 } },
+            {% endif %}
+            {% if transaction==1 or transaction==12 %}
+            //Chess Replace LR
+                { $Duration: 1600, $Cols: 2, $FlyDirection: 8, $ChessMode: { $Column: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInOutQuart, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Brother: { $Duration: 1600, $Cols: 2, $FlyDirection: 4, $ChessMode: { $Column: 12 }, $Easing: { $Top: $JssorEasing$.$EaseInOutQuart, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 } },
+            {% endif %}
+            {% if transaction==1 or transaction==13 %}
+            //Shift TB
+                { $Duration: 1200, $FlyDirection: 4, $Easing: { $Top: $JssorEasing$.$EaseInOutQuart, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Brother: { $Duration: 1200, $FlyDirection: 8, $Easing: { $Top: $JssorEasing$.$EaseInOutQuart, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 } },
+            {% endif %}
+            {% if transaction==1 or transaction==14 %}
+            //Shift LR
+                { $Duration: 1200, $FlyDirection: 1, $Easing: { $Left: $JssorEasing$.$EaseInOutQuart, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $Brother: { $Duration: 1200, $FlyDirection: 2, $Easing: { $Left: $JssorEasing$.$EaseInOutQuart, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 } },
+            {% endif %}
+            {% if transaction==1 or transaction==15 %}
+            //Return TB
+                { $Duration: 1200, $FlyDirection: 8, $Easing: { $Top: $JssorEasing$.$EaseInOutQuart, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $ZIndex: -10, $Brother: { $Duration: 1200, $FlyDirection: 8, $Easing: { $Top: $JssorEasing$.$EaseInOutQuart, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $ZIndex: -10, $Shift: -100 } },
+            {% endif %}
+            {% if transaction==1 or transaction==16 %}
+            //Return LR
+                { $Duration: 1200, $Delay: 40, $Cols: 6, $FlyDirection: 1, $Formation: $JssorSlideshowFormations$.$FormationStraight, $Easing: { $Left: $JssorEasing$.$EaseInOutQuart, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $ZIndex: -10, $Brother: { $Duration: 1200, $Delay: 40, $Cols: 6, $FlyDirection: 1, $Formation: $JssorSlideshowFormations$.$FormationStraight, $Easing: { $Top: $JssorEasing$.$EaseInOutQuart, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2, $ZIndex: -10, $Shift: -100 } },
+            {% endif %}
+            {% if transaction==1 or transaction==17 %}
+            //Rotate Axis down
+                { $Duration: 1500, $Rotate: 0.1, $During: { $Left: [0.6, 0.4], $Top: [0.6, 0.4], $Rotate: [0.6, 0.4] }, $FlyDirection: 10, $Easing: { $Left: $JssorEasing$.$EaseInQuad, $Top: $JssorEasing$.$EaseInQuad, $Opacity: $JssorEasing$.$EaseLinear, $Rotate: $JssorEasing$.$EaseInQuad }, $ScaleHorizontal: 0.1, $ScaleVertical: 0.7, $Opacity: 2, $Brother: { $Duration: 1000, $Rotate: -0.1, $FlyDirection: 5, $Easing: { $Left: $JssorEasing$.$EaseInQuad, $Top: $JssorEasing$.$EaseInQuad, $Opacity: $JssorEasing$.$EaseLinear, $Rotate: $JssorEasing$.$EaseInQuad }, $ScaleHorizontal: 0.2, $ScaleVertical: 0.5, $Opacity: 2 } },
+            {% endif %}
+            {% if transaction==1 or transaction==18 %}
+            //Extrude Replace
+                { $Duration: 1600, $Delay: 40, $Cols: 12, $During: { $Left: [0.4, 0.6] }, $SlideOut: true, $FlyDirection: 2, $Formation: $JssorSlideshowFormations$.$FormationStraight, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInOutExpo, $Opacity: $JssorEasing$.$EaseInOutQuad }, $ScaleHorizontal: 0.2, $Opacity: 2, $Outside: true, $Round: { $Top: 0.5 }, $Brother: { $Duration: 1000, $Delay: 40, $Cols: 12, $FlyDirection: 1, $Formation: $JssorSlideshowFormations$.$FormationStraight, $Assembly: 1028, $Easing: { $Left: $JssorEasing$.$EaseInOutExpo, $Opacity: $JssorEasing$.$EaseInOutQuad }, $ScaleHorizontal: 0.2, $Opacity: 2, $Round: { $Top: 0.5 } } }
+            {% endif %}
+            ];
+        {% endif %}
+        var options = {
+            $FillMode: {{ fillmode }},
+            $AutoPlay: {{ autoplay }},
+            $AutoPlayInterval: {{ autoplayinterval }}, 
+            $PauseOnHover: {{ pauseonhover }},
+            $ArrowKeyNavigation: {{ arrowkeynavigation }},
+            $SlideDuration: {{ slideduration }},
+            $MinDragOffsetToSlide: {{ mindragoffset }},
+            $SlideSpacing: {{ slidespacing }},
+            $DragOrientation: {{ dragorientation }},
+            $PlayOrientation: {{ playorientation }},
+            $DisplayPieces: 1, 
+            $ParkingPosition: 0,
+            $UISearchMode: 1,
+
+            {% if transaction != 0 %}
+            $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: _SlideshowTransitions,
+                $TransitionsOrder: 0,    
+                $ShowLink: false       
+            },
+            {% endif %}
+            $BulletNavigatorOptions: { 
+                $Class: $JssorBulletNavigator$, 
+                $ChanceToShow: {{ chancetoshow }},
+                $AutoCenter: {{ autocenter }},
+                $Orientation: {{ orientation }},
+                $SpacingX: {{ spacingx }},
+                $SpacingY: {{ spacingy }},
+                $Steps: {{ steps }},
+                $Lanes: {{ lanes }}
+            },
+
+            $ArrowNavigatorOptions: { 
+                $Class: $JssorArrowNavigator$,
+                $ChanceToShow: {{ chancetoshowarrow }},
+                $AutoCenter: {{ autocenterarrow }},
+                $Steps: {{ stepsarrow }}
+            }
+        };
+
+        var jssor_slider1 = new $JssorSlider$("{{ __SELF__ }}", options);
+
+        function ScaleSlider() {
+            var bodyWidth = document.body.clientWidth;
+            var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+            if (parentWidth)
+                jssor_slider1.$SetScaleWidth(Math.max(Math.min(parentWidth, bodyWidth-40), 200));
+                                                // Remove 40 if you want full width slider
+            else
+                $JssorUtils$.$Delay(ScaleSlider, 30);
+        }
+
+        ScaleSlider();
+        $JssorUtils$.$AddEvent(window, "load", ScaleSlider);
+
+        if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
+            $JssorUtils$.$OnWindowResize(window, ScaleSlider);
+        }
+    };
+</script>
+<div id="{{ __SELF__ }}" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: {{ height }}px; overflow: hidden;">
+    <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+        <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;">
+        </div>
+        <div class="load" style="position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;">
+        </div>
+    </div>
+    <!-- Slides Container -->
+    <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px; height: {{ height }}px; overflow: hidden;">
+        {% for image in slider.images %}
+        <div>
+            <img u="image" src="{{ image.path }}" />
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Bullet Navigator Skin Begin -->
+    <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
+        <div u="prototype" style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; line-height:19px; color:White; font-size:12px;"></div>
+    </div>
+    <!-- Bullet Navigator Skin End -->
+    <!-- Arrow Navigator Skin Begin -->
+    <!-- Arrow Left -->
+    <span u="arrowleft" class="jssora21l" style="width: 55px; height: 55px; top: 123px; left: 8px;"></span>
+    <!-- Arrow Right -->
+    <span u="arrowright" class="jssora21r" style="width: 55px; height: 55px; top: 123px; right: 8px"></span>
+    <!-- Arrow Navigator Skin End -->
+    <script>
+        jssor_{{ __SELF__ }}_starter('{{ __SELF__ }}');
+    </script>
+</div>

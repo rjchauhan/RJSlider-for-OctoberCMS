@@ -1,4 +1,4 @@
-<?php namespace Raviraj\Rjgallery;
+<?php namespace Raviraj\Rjsliders;
 
 use App;
 use Event;
@@ -6,44 +6,37 @@ use Backend;
 use System\Classes\PluginBase;
 
 /**
- * rjgallery Plugin Information File
+ * rjsliders Plugin Information File
  */
 class Plugin extends PluginBase
 {
-
-    /**
-     * Returns information about this plugin.
-     *
-     * @return array
-     */
     public function pluginDetails()
     {
         return [
-            'name'        => 'RjGallery',
-            'description' => 'Create a photo gallery with full screen preview and slideshow',
+            'name'        => 'Rjsliders',
+            'description' => 'Create a touch responsive slideshow with device independent design.',
             'author'      => 'Raviraj Chauhan',
-            'icon'        => 'icon-picture-o'
+            'icon'        => 'icon-play-circle-o',
         ];
     }
 
     public function registerComponents()
     {
         return [
-            'Raviraj\Rjgallery\Components\Gallery' => 'gallery',
+            'Raviraj\RjSliders\Components\Advanced' => 'advanced',
         ];
     }
 
     public function registerNavigation()
     {
         return [
-            'gallery' => [
-                'label' => 'RjGallery',
-                'url'   => Backend::url('raviraj/rjgallery/galleries'),
-                'icon'        => 'icon-picture-o',
+            'sliders' => [
+                'label' => 'RjSliders',
+                'url'   => Backend::url('raviraj/rjsliders/sliders'),
+                'icon'        => 'icon-play-circle-o',
                 'permissions' => ['raviraj.*'],
                 'order'       => 500,
             ],
         ];
     }
-
 }

@@ -1,7 +1,9 @@
 1.0.1:
-- First version of RjGallary
-- create_galleries_table.php
+- First version of RjSliders
+- create_sliders_table.php
 1.0.2:
-- jQuery inject option added to component options
+- Multiple sliders compatibility on same page, JQuery removed, minor code cleanup
 1.0.3:
-- Minor bug fix
+- Minor code cleanup, JQuery added for responsive design.
+1.0.4:
+- Performance improvement, JQuery removed.

@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('raviraj/rjgallery/galleries') ?>">Galleries</a></li>
+        <li><a href="<?= Backend::url('raviraj/rjsliders/sliders') ?>">Sliders</a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -10,7 +10,7 @@
     <?= Form::open(['class'=>'layout-item stretch layout-column']) ?>
 
         <?= $this->formRender() ?>
-
+        
         <div class="form-buttons layout-item fix">
             <div class="loading-indicator-container">
                 <button
@@ -18,7 +18,7 @@
                     data-request="onSave"
                     data-hotkey="ctrl+s"
                     data-hotkey-mac="cmd+s"
-                    data-load-indicator="Creating Gallery..."
+                    data-load-indicator="Creating Slider..."
                     class="btn btn-primary">
                     Create
                 </button>
@@ -28,12 +28,12 @@
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter"
                     data-hotkey-mac="cmd+enter"
-                    data-load-indicator="Creating Gallery..."
+                    data-load-indicator="Creating Slider..."
                     class="btn btn-default">
                     Create and Close
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('raviraj/rjgallery/galleries') ?>">Cancel</a>
+                    or <a href="<?= Backend::url('raviraj/rjsliders/sliders') ?>">Cancel</a>
                 </span>
             </div>
         </div>
@@ -43,6 +43,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('raviraj/rjgallery/galleries') ?>" class="btn btn-default">Return to galleries list</a></p>
+    <p><a href="<?= Backend::url('raviraj/rjsliders/sliders') ?>" class="btn btn-default">Return to sliders list</a></p>
 
 <?php endif ?>

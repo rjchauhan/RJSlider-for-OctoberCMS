@@ -1,0 +1,27 @@
+.jssorb21 div, .jssorb21 div:hover, .jssorb21 .av
+{
+    background: url(../images/b21.png) no-repeat;
+    overflow:hidden;
+    cursor: pointer;
+}
+.jssorb21 div { background-position: -5px -5px; }
+.jssorb21 div:hover, .jssorb21 .av:hover { background-position: -35px -5px; }
+.jssorb21 .av { background-position: -65px -5px; }
+.jssorb21 .dn, .jssorb21 .dn:hover { background-position: -95px -5px; }
+.jssora21l, .jssora21r, .jssora21ldn, .jssora21rdn
+{
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    background: url(../images/a21.png) center center no-repeat;
+    overflow: hidden;
+}
+.jssora21l { background-position: -3px -33px; }
+.jssora21r { background-position: -63px -33px; }
+.jssora21l:hover { background-position: -123px -33px; }
+.jssora21r:hover { background-position: -183px -33px; }
+.jssora21ldn { background-position: -243px -33px; }
+.jssora21rdn { background-position: -303px -33px; }
+.load{
+	background: url(../images/loading.gif) no-repeat center center;
+}

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Slider
+
+# Model Form Field configuration
+form: @/plugins/raviraj/rjsliders/models/slider/fields.yaml
+
+# Model Class name
+modelClass: Raviraj\Rjsliders\Models\Slider
+
+# Default redirect location
+defaultRedirect: raviraj/rjsliders/sliders
+
+# Create page
+create:
+    title: Create Sliders
+    redirect: raviraj/rjsliders/sliders/update/:id
+    redirectClose: raviraj/rjsliders/sliders
+
+# Update page
+update:
+    title: Edit Sliders
+    redirect: raviraj/rjsliders/sliders
+    redirectClose: raviraj/rjsliders/sliders
+
+# Preview page
+preview:
+    title: Preview Sliders

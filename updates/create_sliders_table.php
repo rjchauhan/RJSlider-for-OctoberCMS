@@ -1,14 +1,14 @@
-<?php namespace Raviraj\Rjgallery\Updates;
+<?php namespace Raviraj\Rjsliders\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
-class CreateGalleriesTable extends Migration
+class CreateSlidersTable extends Migration
 {
 
     public function up()
     {
-        Schema::create('raviraj_rjgallery_galleries', function($table)
+        Schema::create('raviraj_rjsliders_sliders', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -19,7 +19,7 @@ class CreateGalleriesTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('raviraj_rjgallery_galleries');
+        Schema::dropIfExists('raviraj_rjsliders_sliders');
     }
 
 }

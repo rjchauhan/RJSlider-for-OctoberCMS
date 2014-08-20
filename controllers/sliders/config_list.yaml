@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: @/plugins/raviraj/rjgallery/models/gallery/columns.yaml
+list: @/plugins/raviraj/rjsliders/models/slider/columns.yaml
 
 # Model Class name
-modelClass: Raviraj\Rjgallery\Models\Gallery
+modelClass: Raviraj\Rjsliders\Models\Slider
 
 # List Title
-title: Manage Galleries
+title: Manage Sliders
 
 # Link URL for each record
-recordUrl: raviraj/rjgallery/galleries/update/:id
+recordUrl: raviraj/rjsliders/sliders/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

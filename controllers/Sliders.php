@@ -1,14 +1,13 @@
-<?php namespace Raviraj\Rjgallery\Controllers;
+<?php namespace Raviraj\Rjsliders\Controllers;
 
 use Flash;
 use BackendMenu;
 use Backend\Classes\Controller;
-use Raviraj\Rjgallery\Models\Gallery;
-
+use Raviraj\Rjsliders\Models\Slider;
 /**
- * Galleries Back-end Controller
+ * Sliders Back-end Controller
  */
-class Galleries extends Controller
+class Sliders extends Controller
 {
     public $implement = [
         'Backend.Behaviors.FormController',
@@ -22,7 +21,7 @@ class Galleries extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Raviraj.Rjgallery', 'rjgallery', 'galleries');
+        BackendMenu::setContext('Raviraj.Rjsliders', 'rjsliders', 'sliders');
     }
 
     public function index_onDelete()
@@ -30,7 +29,7 @@ class Galleries extends Controller
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
 
             foreach ($checkedIds as $itemId) {
-                if (!$slider = Gallery::find($itemId))
+                if (!$slider = Slider::find($itemId))
                     continue;
 
                 $slider->delete();

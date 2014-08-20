@@ -1,21 +1,22 @@
-<?php namespace Raviraj\Rjgallery\Models;
+<?php namespace Raviraj\Rjsliders\Models;
 
 use Model;
 
 /**
- * Gallery Model
+ * Slider Model
  */
-class Gallery extends Model
+class Slider extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'raviraj_rjgallery_galleries';
+    public $table = 'raviraj_rjsliders_sliders';
 
     public $rules = [
         'name' => 'required|between:3,64',
     ];
+
     /**
      * @var array Guarded fields
      */
