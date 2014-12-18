@@ -7,3 +7,5 @@
 - Minor code cleanup, JQuery added for responsive design.
 1.0.4:
 - Performance improvement, JQuery removed.
+1.0.5:
+- Slider loading issue fixed.
