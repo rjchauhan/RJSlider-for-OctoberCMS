@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('raviraj/rjsliders/sliders') ?>">Sliders</a></li>
+        <li><a href="<?= Backend::url('raviraj/rjsliders/sliders') ?>"><?= e(trans('raviraj.rjsliders::lang.create.sliders')); ?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -19,9 +19,9 @@
                     data-request-data="redirect:0"
                     data-hotkey="ctrl+s"
                     data-hotkey-mac="cmd+s"
-                    data-load-indicator="Saving Slider..."
+                    data-load-indicator="<?= e(trans('raviraj.rjsliders::lang.update.saving')); ?>"
                     class="btn btn-primary">
-                    <u>S</u>ave
+                    <?= e(trans('raviraj.rjsliders::lang.update.save')); ?>
                 </button>
                 <button
                     type="button"
@@ -29,19 +29,19 @@
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter"
                     data-hotkey-mac="cmd+enter"
-                    data-load-indicator="Saving Slider..."
+                    data-load-indicator="<?= e(trans('raviraj.rjsliders::lang.update.saving')); ?>"
                     class="btn btn-default">
-                    Save and Close
+                    <?= e(trans('raviraj.rjsliders::lang.update.saveclose')); ?>
                 </button>
                 <button
                     type="button"
                     class="oc-icon-trash-o btn-icon danger pull-right"
                     data-request="onDelete"
-                    data-load-indicator="Deleting Slider..."
-                    data-request-confirm="Do you really want to delete this slider?">
+                    data-load-indicator="<?= e(trans('raviraj.rjsliders::lang.update.deleting')); ?>"
+                    data-request-confirm="<?= e(trans('raviraj.rjsliders::lang.update.reallydelete')); ?>">
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('raviraj/rjsliders/sliders') ?>">Cancel</a>
+                    <?= e(trans('raviraj.rjsliders::lang.create.or')); ?> <a href="<?= Backend::url('raviraj/rjsliders/sliders') ?>"><?= e(trans('raviraj.rjsliders::lang.create.cancel')); ?></a>
                 </span>
             </div>
         </div>
@@ -51,6 +51,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('raviraj/rjsliders/sliders') ?>" class="btn btn-default">Return to sliders list</a></p>
+    <p><a href="<?= Backend::url('raviraj/rjsliders/sliders') ?>" class="btn btn-default"><?= e(trans('raviraj.rjsliders::lang.create.return')); ?></a></p>
 
 <?php endif ?>

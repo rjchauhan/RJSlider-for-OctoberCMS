@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('raviraj/rjsliders/sliders') ?>">Sliders</a></li>
+        <li><a href="<?= Backend::url('raviraj/rjsliders/sliders') ?>"><?= e(trans('raviraj.rjsliders::lang.create.sliders')); ?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -14,6 +14,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('raviraj/rjsliders/sliders') ?>" class="btn btn-default">Return to sliders list</a></p>
+    <p><a href="<?= Backend::url('raviraj/rjsliders/sliders') ?>" class="btn btn-default"><?= e(trans('raviraj.rjsliders::lang.create.return')); ?></a></p>
 
 <?php endif ?>

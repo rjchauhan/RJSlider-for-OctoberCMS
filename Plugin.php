@@ -10,11 +10,17 @@ use System\Classes\PluginBase;
  */
 class Plugin extends PluginBase
 {
+
+    /**
+     * Returns information about this plugin.
+     *
+     * @return array
+     */
     public function pluginDetails()
     {
         return [
-            'name'        => 'Rjsliders',
-            'description' => 'Create a touch responsive slideshow with device independent design.',
+            'name'        => 'raviraj.rjsliders::lang.plugin.name',
+            'description' => 'raviraj.rjsliders::lang.plugin.description',
             'author'      => 'Raviraj Chauhan',
             'icon'        => 'icon-play-circle-o',
         ];
@@ -31,7 +37,7 @@ class Plugin extends PluginBase
     {
         return [
             'sliders' => [
-                'label' => 'RjSliders',
+                'label' => 'raviraj.rjsliders::lang.menu.name',
                 'url'   => Backend::url('raviraj/rjsliders/sliders'),
                 'icon'        => 'icon-play-circle-o',
                 'permissions' => ['raviraj.*'],
