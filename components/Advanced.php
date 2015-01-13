@@ -2,14 +2,15 @@
 
 use Cms\Classes\ComponentBase;
 use Raviraj\Rjsliders\Models\Slider;
+use Lang;
 
 class Advanced extends ComponentBase
 {
     public function componentDetails()
     {
         return [
-            'name'        => 'Advanced Slider',
-            'description' => 'Display a slideshow for your images with advance options.'
+            'name'        => 'raviraj.rjsliders::lang.menu.name',
+            'description' => 'raviraj.rjsliders::lang.menu.description'
         ];
     }
 
@@ -17,186 +18,186 @@ class Advanced extends ComponentBase
     {
         return [
             'idSlider' => [
-                'title'        => 'Slider',
-                'description'  => 'Choose the slider that will display.',
+                'title'        => 'raviraj.rjsliders::lang.idslider.title',
+                'description'  => 'raviraj.rjsliders::lang.idslider.description',
                 'type'         => 'dropdown',
             ],
             'height' => [
-                'title'       => 'Height',
-                'description' => 'Height of slider.',
+                'title'         => 'raviraj.rjsliders::lang.height.title',
+                'description'   => 'raviraj.rjsliders::lang.height.description',
                 'type'        => 'string',
                 'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'Invalid format.',
+                'validationMessage' => 'raviraj.rjsliders::lang.height.validationMessage',
                 'default'     => '400',
-                'group'       => 'Options',
+                'group'       => Lang::get('raviraj.rjsliders::lang.groups.options'),
             ],
             'autoplay' => [
-                'title'        => 'Autoplay',
-                'description'  => 'Autoplay slidshow.',
+                'title'         => 'raviraj.rjsliders::lang.autoplay.title',
+                'description'   => 'raviraj.rjsliders::lang.autoplay.description',
                 'type'         => 'dropdown',
                 'default'      => 'true',
-                'group'        => 'Options',
+                'group'        => Lang::get('raviraj.rjsliders::lang.groups.options'),
             ],
             'fillmode' => [
-                'title'        => 'Fill Mode',
-                'description'  => 'The way to fill image in slide.',
+                'title'         => 'raviraj.rjsliders::lang.fillmode.title',
+                'description'   => 'raviraj.rjsliders::lang.fillmode.description',
                 'type'         => 'dropdown',
                 'default'      => '0',
-                'group'        => 'Options',
+                'group'        => Lang::get('raviraj.rjsliders::lang.groups.options'),
             ],
             // Effect Options
             'transaction' => [
-                'title'        => 'Transaction Effect',
-                'description'  => 'Transaction effects when a slider is auto playing.',
+                'title'        => 'raviraj.rjsliders::lang.transaction.title',
+                'description'  => 'raviraj.rjsliders::lang.transaction.description',
                 'type'         => 'dropdown',
                 'default'      => '1',
-                'group'        => 'Effects',
+                'group'        => Lang::get('raviraj.rjsliders::lang.groups.effects'),
             ],
             'autoplayinterval' => [
-                'title'        => 'Auto Play Interval',
-                'description'  => 'Interval (in milliseconds) to go for next slide.',
+                'title'        => 'raviraj.rjsliders::lang.autoplayinterval.title',
+                'description'  => 'raviraj.rjsliders::lang.autoplayinterval.description',
                 'type'        => 'string',
                 'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'Please enter time in milliseconds.',
+                'validationMessage' => 'raviraj.rjsliders::lang.autoplayinterval.validationMessage',
                 'default'     => '2000',
-                'group'       => 'Effects',
+                'group'       => Lang::get('raviraj.rjsliders::lang.groups.effects'),
             ],
             'pauseonhover' => [
-                'title'        => 'Pause On Hover',
-                'description'  => 'Whether to pause when mouse over if a slider is auto playing.',
+                'title'        => 'raviraj.rjsliders::lang.pauseonhover.title',
+                'description'  => 'raviraj.rjsliders::lang.pauseonhover.description',
                 'type'         => 'dropdown',
                 'default'      => '1',
-                'group'        => 'Effects',
+                'group'        => Lang::get('raviraj.rjsliders::lang.groups.effects'),
             ],
             'arrowkeynavigation' => [
-                'title'        => 'Arrow Key Navigation',
-                'description'  => 'Allows keyboard (arrow key) navigation or not.',
+                'title'        => 'raviraj.rjsliders::lang.arrowkeynavigation.title',
+                'description'  => 'raviraj.rjsliders::lang.arrowkeynavigation.description',
                 'type'         => 'dropdown',
                 'default'      => 'true',
-                'group'        => 'Effects',
+                'group'        => Lang::get('raviraj.rjsliders::lang.groups.effects'),
             ],
             'slideduration' => [
-                'title'        => 'Slide Duration',
-                'description'  => 'Specifies default duration (swipe) for slide in milliseconds.',
+                'title'        => 'raviraj.rjsliders::lang.slideduration.title',
+                'description'  => 'raviraj.rjsliders::lang.slideduration.description',
                 'type'        => 'string',
                 'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'Please enter time in milliseconds.',
+                'validationMessage' => 'raviraj.rjsliders::lang.slideduration.validationMessage',
                 'default'     => '500',
-                'group'       => 'Effects',
+                'group'       => Lang::get('raviraj.rjsliders::lang.groups.effects'),
             ],
             'mindragoffset' => [
-                'title'        => 'Drag Offset',
-                'description'  => 'Minimum drag offset to trigger slide.',
+                'title'        => 'raviraj.rjsliders::lang.mindragoffset.title',
+                'description'  => 'raviraj.rjsliders::lang.mindragoffset.description',
                 'type'        => 'string',
                 'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'Invalid format.',
+                'validationMessage' => 'raviraj.rjsliders::lang.mindragoffset.validationMessage',
                 'default'     => '40',
-                'group'       => 'Effects',
+                'group'       => Lang::get('raviraj.rjsliders::lang.groups.effects'),
             ],
             'slidespacing' => [
-                'title'        => 'Slide Spacing',
-                'description'  => 'Space between each slide in pixels.',
+                'title'        => 'raviraj.rjsliders::lang.slidespacing.title',
+                'description'  => 'raviraj.rjsliders::lang.slidespacing.description',
                 'type'        => 'string',
                 'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'Invalid format.',
+                'validationMessage' => 'raviraj.rjsliders::lang.slidespacing.validationMessage',
                 'default'     => '0',
-                'group'       => 'Effects',
+                'group'       => Lang::get('raviraj.rjsliders::lang.groups.effects'),
             ],
             'dragorientation' => [
-                'title'        => 'Drag Orientation',
-                'description'  => 'Orientation to drag slide.',
+                'title'        => 'raviraj.rjsliders::lang.dragorientation.title',
+                'description'  => 'raviraj.rjsliders::lang.dragorientation.description',
                 'type'         => 'dropdown',
                 'default'      => '1',
-                'group'        => 'Effects',
+                'group'        => Lang::get('raviraj.rjsliders::lang.groups.effects'),
             ],
             'playorientation' => [
-                'title'        => 'Play Orientation',
-                'description'  => 'Orientation to play slide.',
+                'title'        => 'raviraj.rjsliders::lang.playorientation.title',
+                'description'  => 'raviraj.rjsliders::lang.playorientation.description',
                 'type'         => 'dropdown',
                 'default'      => '1',
-                'group'        => 'Effects',
+                'group'        => Lang::get('raviraj.rjsliders::lang.groups.effects'),
             ],
             // Bullet Navigator Options
             'chancetoshow' => [
-                'title'        => 'Show',
-                'description'  => 'Chance to show.',
+                'title'        => 'raviraj.rjsliders::lang.chancetoshow.title',
+                'description'  => 'raviraj.rjsliders::lang.chancetoshow.description',
                 'type'         => 'dropdown',
                 'default'      => '2',
-                'group'        => 'Bullet Navigator Options',
+                'group'        => Lang::get('raviraj.rjsliders::lang.groups.bulletnav'),
             ],
             'autocenter' => [
-                'title'        => 'Auto Center',
-                'description'  => 'Auto center navigator in parent container.',
+                'title'        => 'raviraj.rjsliders::lang.autocenter.title',
+                'description'  => 'raviraj.rjsliders::lang.autocenter.description',
                 'type'         => 'dropdown',
                 'default'      => '1',
-                'group'        => 'Bullet Navigator Options',
+                'group'        => Lang::get('raviraj.rjsliders::lang.groups.bulletnav'),
             ],
             'orientation' => [
-                'title'        => 'Orientation',
-                'description'  => 'The orientation of the navigator.',
+                'title'        => 'raviraj.rjsliders::lang.orientation.title',
+                'description'  => 'raviraj.rjsliders::lang.orientation.description',
                 'type'         => 'dropdown',
                 'default'      => '1',
-                'group'        => 'Bullet Navigator Options',
+                'group'        => Lang::get('raviraj.rjsliders::lang.groups.bulletnav'),
             ],
             'spacingx' => [
-                'title'        => 'Spacing X',
-                'description'  => 'Horizontal space between each item in pixel.',
+                'title'        => 'raviraj.rjsliders::lang.spacingx.title',
+                'description'  => 'raviraj.rjsliders::lang.spacingx.description',
                 'type'        => 'string',
                 'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'Invalid format.',
+                'validationMessage' => 'raviraj.rjsliders::lang.spacingx.validationMessage',
                 'default'     => '8',
-                'group'       => 'Bullet Navigator Options',
+                'group'       => Lang::get('raviraj.rjsliders::lang.groups.bulletnav'),
             ],
             'spacingy' => [
-                'title'        => 'Spacing Y',
-                'description'  => 'Vertical space between each item in pixel.',
+                'title'        => 'raviraj.rjsliders::lang.spacingy.title',
+                'description'  => 'raviraj.rjsliders::lang.spacingy.description',
                 'type'        => 'string',
                 'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'Invalid format.',
+                'validationMessage' => 'raviraj.rjsliders::lang.spacingy.validationMessage',
                 'default'     => '8',
-                'group'       => 'Bullet Navigator Options',
+                'group'       => Lang::get('raviraj.rjsliders::lang.groups.bulletnav'),
             ],
             'steps' => [
-                'title'        => 'Steps',
-                'description'  => 'Steps to go for each navigation request.',
+                'title'        => 'raviraj.rjsliders::lang.steps.title',
+                'description'  => 'raviraj.rjsliders::lang.steps.description',
                 'type'        => 'string',
                 'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'Invalid format.',
+                'validationMessage' => 'raviraj.rjsliders::lang.steps.validationMessage',
                 'default'     => '1',
-                'group'       => 'Bullet Navigator Options',
+                'group'       => Lang::get('raviraj.rjsliders::lang.groups.bulletnav'),
             ],
             'lanes' => [
-                'title'        => 'Lanes',
-                'description'  => 'Specify lanes to arrange items.',
+                'title'        => 'raviraj.rjsliders::lang.lanes.title',
+                'description'  => 'raviraj.rjsliders::lang.lanes.description',
                 'type'        => 'string',
                 'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'Invalid format.',
+                'validationMessage' => 'raviraj.rjsliders::lang.lanes.validationMessage',
                 'default'     => '1',
-                'group'       => 'Bullet Navigator Options',
+                'group'       => Lang::get('raviraj.rjsliders::lang.groups.bulletnav'),
             ],
             // Arrow Navigator Options
             'chancetoshowarrow' => [
-                'title'        => 'Show',
-                'description'  => 'Chance to show.',
+                'title'        => 'raviraj.rjsliders::lang.chancetoshowarrow.title',
+                'description'  => 'raviraj.rjsliders::lang.chancetoshowarrow.description',
                 'type'         => 'dropdown',
                 'default'      => '1',
-                'group'        => 'Arrow Navigator Options',
+                'group'        => Lang::get('raviraj.rjsliders::lang.groups.arrownav'),
             ],
             'autocenterarrow' => [
-                'title'        => 'Auto Center',
-                'description'  => 'Auto center navigator in parent container.',
+                'title'        => 'raviraj.rjsliders::lang.autocenterarrow.title',
+                'description'  => 'raviraj.rjsliders::lang.autocenterarrow.description',
                 'type'         => 'dropdown',
                 'default'      => '2',
-                'group'        => 'Arrow Navigator Options',
+                'group'        => Lang::get('raviraj.rjsliders::lang.groups.arrownav'),
             ],
             'stepsarrow' => [
-                'title'        => 'Steps',
-                'description'  => 'Steps to go for each navigation request.',
+                'title'        => 'raviraj.rjsliders::lang.stepsarrow.title',
+                'description'  => 'raviraj.rjsliders::lang.stepsarrow.description',
                 'type'        => 'string',
                 'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'Invalid format.',
+                'validationMessage' => 'raviraj.rjsliders::lang.stepsarrow.validationMessage',
                 'default'     => '1',
-                'group'       => 'Arrow Navigator Options',
+                'group'       => Lang::get('raviraj.rjsliders::lang.groups.arrownav'),
             ],
         ];
     }
@@ -207,71 +208,119 @@ class Advanced extends ComponentBase
     }
     public function getautoplayOptions()
     {
-        return [ 'true' => 'True', 'false' => 'False'];
+        return [
+            'true' => Lang::get('raviraj.rjsliders::lang.misc.true'),
+            'false' => Lang::get('raviraj.rjsliders::lang.misc.false')
+        ];
     }
     public function getfillmodeOptions()
     {
-        return ['0'=>'Stretch','1'=>'Keep Aspect Ratio','2'=>'Cover Whole Slide','4'=>'Actual Size','5'=>'Contain Large Image'];
+        return [
+            '0' => Lang::get('raviraj.rjsliders::lang.misc.stretch'),
+            '1' => Lang::get('raviraj.rjsliders::lang.misc.keepratio'),
+            '2' => Lang::get('raviraj.rjsliders::lang.misc.coverwhole'),
+            '4' => Lang::get('raviraj.rjsliders::lang.misc.actual'),
+            '5' => Lang::get('raviraj.rjsliders::lang.misc.containlarge')
+        ];
     }
     public function gettransactionOptions()
     {
         return [ 
-            '0' => 'No Effect',
-            '1' => 'Random',
-            '2'=> 'Fade Twins',
-            '3'=> 'Rotate Overlap',
-            '4' => 'Switch',
-            '5' => 'Rotate Relay',
-            '6' => 'Doors',
-            '7' => 'Rotate In+ Out-',
-            '8' => 'Fly Twins',
-            '9' => 'Rotate In- Out+',
-            '10' => 'Rotate Axis Up Overlap',
-            '11' => 'Chess Replace TB',
-            '12' => 'Chess Replace LR',
-            '13' => 'Shift TB',
-            '14' => 'Shift LR',
-            '15' => 'Return TB',
-            '16' => 'Return LR',
-            '17' => 'Rotate Axis Down',
-            '18' => 'Extrude Replace',
+            '0' => Lang::get('raviraj.rjsliders::lang.misc.noeffect'),
+            '1' => Lang::get('raviraj.rjsliders::lang.misc.random'),
+            '2' => Lang::get('raviraj.rjsliders::lang.misc.fadetwins'),
+            '3' => Lang::get('raviraj.rjsliders::lang.misc.rotateoverlap'),
+            '4' => Lang::get('raviraj.rjsliders::lang.misc.switch'),
+            '5' => Lang::get('raviraj.rjsliders::lang.misc.rotaterelay'),
+            '6' => Lang::get('raviraj.rjsliders::lang.misc.doors'),
+            '7' => Lang::get('raviraj.rjsliders::lang.misc.rotateinplusout'),
+            '8' => Lang::get('raviraj.rjsliders::lang.misc.flytwins'),
+            '9' => Lang::get('raviraj.rjsliders::lang.misc.rotateinminusout'),
+            '10' => Lang::get('raviraj.rjsliders::lang.misc.rotateaxisup'),
+            '11' => Lang::get('raviraj.rjsliders::lang.misc.chesstb'),
+            '12' => Lang::get('raviraj.rjsliders::lang.misc.chesslr'),
+            '13' => Lang::get('raviraj.rjsliders::lang.misc.shifttb'),
+            '14' => Lang::get('raviraj.rjsliders::lang.misc.shiftlr'),
+            '15' => Lang::get('raviraj.rjsliders::lang.misc.returntb'),
+            '16' => Lang::get('raviraj.rjsliders::lang.misc.returnlr'),
+            '17' => Lang::get('raviraj.rjsliders::lang.misc.rotateaxisdown'),
+            '18' => Lang::get('raviraj.rjsliders::lang.misc.extrude')
         ];
     }
     public function getpauseonhoverOptions()
     {
-        return [ '0' => 'No Pause', '1' => 'Mouse', '2'=> 'Touch', '3'=> 'Mouse & Touch'];
+        return [
+            '0' => Lang::get('raviraj.rjsliders::lang.misc.nopause'),
+            '1' => Lang::get('raviraj.rjsliders::lang.misc.mouse'),
+            '2' => Lang::get('raviraj.rjsliders::lang.misc.touch'),
+            '3' => Lang::get('raviraj.rjsliders::lang.misc.mousentouch')
+        ];
     }
     public function getarrowkeynavigationOptions()
     {
-        return [ 'true' => 'True', 'false' => 'False'];
+        return [
+            'true' => Lang::get('raviraj.rjsliders::lang.misc.true'),
+            'false' => Lang::get('raviraj.rjsliders::lang.misc.false')
+        ];
     }
     public function getdragorientationOptions()
     {
-        return [ '0' => 'No Drag', '1' => 'Horizontal', '2'=> 'Vertical', '3'=> 'Both'];
+        return [
+            '0' => Lang::get('raviraj.rjsliders::lang.misc.nodrag'),
+            '1' => Lang::get('raviraj.rjsliders::lang.misc.horizontal'),
+            '2' => Lang::get('raviraj.rjsliders::lang.misc.vertical'),
+            '3' => Lang::get('raviraj.rjsliders::lang.misc.both')
+        ];
     }
     public function getplayorientationOptions()
     {
-        return [ '1' => 'Horizontal', '2'=> 'Vertical', '5'=> 'Horizontal Reverse','6'=>'Vertical Reverse'];
+        return [
+            '1' => Lang::get('raviraj.rjsliders::lang.misc.horizontal'),
+            '2' => Lang::get('raviraj.rjsliders::lang.misc.vertical'),
+            '5' => Lang::get('raviraj.rjsliders::lang.misc.horizontalrev'),
+            '6' => Lang::get('raviraj.rjsliders::lang.misc.verticalrev')
+        ];
     }
     public function getchancetoshowOptions()
     {
-        return [ '0' => 'Never', '1'=> 'Mouse Over', '2'=> 'Always'];
+        return [
+            '0' => Lang::get('raviraj.rjsliders::lang.misc.never'),
+            '1' => Lang::get('raviraj.rjsliders::lang.misc.mouseover'),
+            '2' => Lang::get('raviraj.rjsliders::lang.misc.always')
+        ];
     }
     public function getautocenterOptions()
     {
-        return [ '0' => 'None', '1'=> 'Horizontal', '2'=> 'Vertical','3'=>'Both'];
+        return [
+            '0' => Lang::get('raviraj.rjsliders::lang.misc.none'),
+            '1' => Lang::get('raviraj.rjsliders::lang.misc.horizontal'),
+            '2' => Lang::get('raviraj.rjsliders::lang.misc.vertical'),
+            '3' => Lang::get('raviraj.rjsliders::lang.misc.both')
+        ];
     }
     public function getorientationOptions()
     {
-        return [ '1' => 'Horizontal', '2'=> 'Vertical'];
+        return [
+            '1' => Lang::get('raviraj.rjsliders::lang.misc.horizontal'),
+            '2' => Lang::get('raviraj.rjsliders::lang.misc.vertical')
+        ];
     }
     public function getchancetoshowarrowOptions()
     {
-        return [ '0' => 'Never', '1'=> 'Mouse Over', '2'=> 'Always'];
+        return [
+            '0' => Lang::get('raviraj.rjsliders::lang.misc.never'),
+            '1' => Lang::get('raviraj.rjsliders::lang.misc.mouseover'),
+            '2' => Lang::get('raviraj.rjsliders::lang.misc.always')
+        ];
     }
     public function getautocenterarrowOptions()
     {
-        return [ '0' => 'None', '1'=> 'Horizontal', '2'=> 'Vertical','3'=>'Both'];
+        return [
+            '0' => Lang::get('raviraj.rjsliders::lang.misc.none'),
+            '1' => Lang::get('raviraj.rjsliders::lang.misc.horizontal'),
+            '2' => Lang::get('raviraj.rjsliders::lang.misc.vertical'),
+            '3' => Lang::get('raviraj.rjsliders::lang.misc.both')
+        ];
     }
 
     public function onRun()

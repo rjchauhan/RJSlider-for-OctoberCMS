@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: Slider
+name: raviraj.rjsliders::lang.idslider.title
 
 # Model Form Field configuration
 form: @/plugins/raviraj/rjsliders/models/slider/fields.yaml
@@ -16,16 +16,16 @@ defaultRedirect: raviraj/rjsliders/sliders
 
 # Create page
 create:
-    title: Create Sliders
+    title: raviraj.rjsliders::lang.form.create
     redirect: raviraj/rjsliders/sliders/update/:id
     redirectClose: raviraj/rjsliders/sliders
 
 # Update page
 update:
-    title: Edit Sliders
+    title: raviraj.rjsliders::lang.form.update
     redirect: raviraj/rjsliders/sliders
     redirectClose: raviraj/rjsliders/sliders
 
 # Preview page
 preview:
-    title: Preview Sliders
+    title: raviraj.rjsliders::lang.form.preview
