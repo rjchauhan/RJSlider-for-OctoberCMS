@@ -1,4 +1,4 @@
-#RJ Slider Plugin
+#Jssor Slider Plugin for OctoberCMS
 Create a slideshow in your website using **high performance**, touch responsive sliders.
 
 ####Features
