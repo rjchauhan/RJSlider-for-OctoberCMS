@@ -80,7 +80,7 @@ return [
     	'create' => 'Create',
     	'createclose' => 'Create and Close',
     	'cancel' => 'Cancel',
-    	'or' => 'veya',
+    	'or' => 'or',
     	'return' => 'Return to sliders list'
     ],
     'update' => [
