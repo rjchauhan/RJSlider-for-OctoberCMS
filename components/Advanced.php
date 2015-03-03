@@ -330,30 +330,11 @@ class Advanced extends ComponentBase
     }
     public function onRender(){
         $slider = new Slider;
-        $this->slider = $this->page['slider'] = $slider->where('id', '=', $this->propertyOrParam('idSlider'))->first();
+        $this->slider = $this->page['slider'] = $slider->where('id', '=', $this->property('idSlider'))->first();
 
-        $this->page['height']=$this->propertyOrParam('height');
-        $this->page['autoplay']=$this->propertyOrParam('autoplay');
-        $this->page['fillmode']=$this->propertyOrParam('fillmode');
-
-        $this->page['transaction']=$this->propertyOrParam('transaction');
-        $this->page['autoplayinterval']=$this->propertyOrParam('autoplayinterval');
-        $this->page['pauseonhover']=$this->propertyOrParam('pauseonhover');
-        $this->page['arrowkeynavigation']=$this->propertyOrParam('arrowkeynavigation');
-        $this->page['slideduration']=$this->propertyOrParam('slideduration');
-        $this->page['mindragoffset']=$this->propertyOrParam('mindragoffset');
-        $this->page['slidespacing']=$this->propertyOrParam('slidespacing');
-        $this->page['dragorientation']=$this->propertyOrParam('dragorientation');
-        $this->page['playorientation']=$this->propertyOrParam('playorientation');
-        $this->page['chancetoshow']=$this->propertyOrParam('chancetoshow');
-        $this->page['autocenter']=$this->propertyOrParam('autocenter');
-        $this->page['orientation']=$this->propertyOrParam('orientation');
-        $this->page['spacingx']=$this->propertyOrParam('spacingx');
-        $this->page['spacingy']=$this->propertyOrParam('spacingy');
-        $this->page['steps']=$this->propertyOrParam('steps');
-        $this->page['lanes']=$this->propertyOrParam('lanes');
-        $this->page['chancetoshowarrow']=$this->propertyOrParam('chancetoshowarrow');
-        $this->page['autocenterarrow']=$this->propertyOrParam('autocenterarrow');
-        $this->page['stepsarrow']=$this->propertyOrParam('stepsarrow');
+        // Inject all slider properties to page.
+        foreach ($this->getProperties() as $key => $value) {
+            $this->page[$key] = $value;
+        }
     }
 }
