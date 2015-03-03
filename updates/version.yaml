@@ -9,3 +9,5 @@
 - Performance improvement, JQuery removed.
 1.0.5:
 - Slider loading issue fixed.
+1.0.6:
+- Added compatibility for latest version of OctoberCMS.
