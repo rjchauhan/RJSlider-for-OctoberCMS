@@ -40,9 +40,19 @@ class Plugin extends PluginBase
                 'label' => 'raviraj.rjsliders::lang.menu.name',
                 'url'   => Backend::url('raviraj/rjsliders/sliders'),
                 'icon'        => 'icon-play-circle-o',
-                'permissions' => ['raviraj.*'],
+                'permissions' => ['raviraj.rjsliders.*'],
                 'order'       => 500,
             ],
+        ];
+    }
+
+    public function registerPermissions()
+    {
+        return [
+            'raviraj.rjsliders.*' => [
+                'tab' => 'raviraj.rjsliders::lang.plugin.name',
+                'label' => 'raviraj.rjsliders::lang.permissions.all'
+            ]
         ];
     }
 }
