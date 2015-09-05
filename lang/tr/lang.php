@@ -5,6 +5,9 @@ return [
         'name' => 'Slayt',
         'description' => 'Dokunmaya duyarlı tasarımı ile web siteniz için slayt gösterisi oluşturabilirsiniz.'
     ],
+    'permissions' => [
+        'all' => 'Manage sliders'
+    ],
     'misc' => [
     	'newslider' => 'Yeni Slayt',
     	'sure' => 'Silmek istediğinize emin misiniz?',

@@ -5,6 +5,9 @@ return [
         'name' => 'RJ Slider',
         'description' => 'Create a touch responsive slideshow with device independent design.'
     ],
+    'permissions' => [
+        'all' => 'Manage sliders'
+    ],
     'misc' => [
     	'newslider' => 'New Slider',
     	'sure' => 'Are you sure?',
