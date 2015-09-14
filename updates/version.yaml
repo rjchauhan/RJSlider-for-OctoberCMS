@@ -13,3 +13,5 @@
 - Added compatibility for latest version of OctoberCMS.
 1.0.7:
 - Fix showing permissions
+1.0.8:
+- Use checkboxes for boolean values

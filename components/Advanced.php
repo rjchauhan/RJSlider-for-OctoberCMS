@@ -34,7 +34,7 @@ class Advanced extends ComponentBase
             'autoplay' => [
                 'title'         => 'raviraj.rjsliders::lang.autoplay.title',
                 'description'   => 'raviraj.rjsliders::lang.autoplay.description',
-                'type'         => 'dropdown',
+                'type'         => 'checkbox',
                 'default'      => 'true',
                 'group'        => Lang::get('raviraj.rjsliders::lang.groups.options'),
             ],
@@ -72,7 +72,7 @@ class Advanced extends ComponentBase
             'arrowkeynavigation' => [
                 'title'        => 'raviraj.rjsliders::lang.arrowkeynavigation.title',
                 'description'  => 'raviraj.rjsliders::lang.arrowkeynavigation.description',
-                'type'         => 'dropdown',
+                'type'         => 'checkbox',
                 'default'      => 'true',
                 'group'        => Lang::get('raviraj.rjsliders::lang.groups.effects'),
             ],
@@ -135,7 +135,7 @@ class Advanced extends ComponentBase
             'orientation' => [
                 'title'        => 'raviraj.rjsliders::lang.orientation.title',
                 'description'  => 'raviraj.rjsliders::lang.orientation.description',
-                'type'         => 'dropdown',
+                'type'         => 'checkbox',
                 'default'      => '1',
                 'group'        => Lang::get('raviraj.rjsliders::lang.groups.bulletnav'),
             ],
@@ -206,13 +206,6 @@ class Advanced extends ComponentBase
     {
         return Slider::select('id', 'name')->orderBy('name')->get()->lists('name', 'id');
     }
-    public function getautoplayOptions()
-    {
-        return [
-            'true' => Lang::get('raviraj.rjsliders::lang.misc.true'),
-            'false' => Lang::get('raviraj.rjsliders::lang.misc.false')
-        ];
-    }
     public function getfillmodeOptions()
     {
         return [
@@ -256,13 +249,6 @@ class Advanced extends ComponentBase
             '3' => Lang::get('raviraj.rjsliders::lang.misc.mousentouch')
         ];
     }
-    public function getarrowkeynavigationOptions()
-    {
-        return [
-            'true' => Lang::get('raviraj.rjsliders::lang.misc.true'),
-            'false' => Lang::get('raviraj.rjsliders::lang.misc.false')
-        ];
-    }
     public function getdragorientationOptions()
     {
         return [
@@ -296,13 +282,6 @@ class Advanced extends ComponentBase
             '1' => Lang::get('raviraj.rjsliders::lang.misc.horizontal'),
             '2' => Lang::get('raviraj.rjsliders::lang.misc.vertical'),
             '3' => Lang::get('raviraj.rjsliders::lang.misc.both')
-        ];
-    }
-    public function getorientationOptions()
-    {
-        return [
-            '1' => Lang::get('raviraj.rjsliders::lang.misc.horizontal'),
-            '2' => Lang::get('raviraj.rjsliders::lang.misc.vertical')
         ];
     }
     public function getchancetoshowarrowOptions()
