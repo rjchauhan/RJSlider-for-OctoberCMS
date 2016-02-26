@@ -6,7 +6,7 @@
 name: raviraj.rjsliders::lang.idslider.title
 
 # Model Form Field configuration
-form: @/plugins/raviraj/rjsliders/models/slider/fields.yaml
+form: ~/plugins/raviraj/rjsliders/models/slider/fields.yaml
 
 # Model Class name
 modelClass: Raviraj\Rjsliders\Models\Slider
