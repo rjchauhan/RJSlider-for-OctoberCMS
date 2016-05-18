@@ -10,7 +10,6 @@ use System\Classes\PluginBase;
  */
 class Plugin extends PluginBase
 {
-
     /**
      * Returns information about this plugin.
      *
@@ -23,13 +22,14 @@ class Plugin extends PluginBase
             'description' => 'raviraj.rjsliders::lang.plugin.description',
             'author'      => 'Raviraj Chauhan',
             'icon'        => 'icon-play-circle-o',
+            'homepage'    => 'https://github.com/rjchauhan/RJSlider-for-OctoberCMS'
         ];
     }
 
     public function registerComponents()
     {
         return [
-            'Raviraj\RjSliders\Components\Advanced' => 'advanced',
+            'Raviraj\RjSliders\Components\Advanced' => 'advanced'
         ];
     }
 
@@ -37,12 +37,12 @@ class Plugin extends PluginBase
     {
         return [
             'sliders' => [
-                'label' => 'raviraj.rjsliders::lang.menu.name',
-                'url'   => Backend::url('raviraj/rjsliders/sliders'),
+                'label'       => 'raviraj.rjsliders::lang.menu.name',
+                'url'         => Backend::url('raviraj/rjsliders/sliders'),
                 'icon'        => 'icon-play-circle-o',
                 'permissions' => ['raviraj.rjsliders.*'],
-                'order'       => 500,
-            ],
+                'order'       => 500
+            ]
         ];
     }
 
@@ -50,7 +50,7 @@ class Plugin extends PluginBase
     {
         return [
             'raviraj.rjsliders.*' => [
-                'tab' => 'raviraj.rjsliders::lang.plugin.name',
+                'tab'   => 'raviraj.rjsliders::lang.plugin.name',
                 'label' => 'raviraj.rjsliders::lang.permissions.all'
             ]
         ];
