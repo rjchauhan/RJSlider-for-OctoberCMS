@@ -17,3 +17,5 @@
 - Add CS locale
 1.0.9:
 - Use checkboxes for boolean values
+1.1.0:
+- Fix deleting sliders
