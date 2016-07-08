@@ -9,11 +9,12 @@
             })"
             data-request="onDelete"
             data-request-confirm="<?= e(trans('raviraj.rjsliders::lang.misc.sure')); ?>"
-            data-trigger-type="enable"
+            data-trigger-action="enable"
             data-trigger=".control-list input[type=checkbox]"
             data-trigger-condition="checked"
+            data-request-success="$(this).prop('disabled', true)"
             data-stripe-load-indicator>
-            <?= e(trans('raviraj.rjsliders::lang.misc.remove')); ?>
-        </button>
+        <?= e(trans('raviraj.rjsliders::lang.misc.remove')); ?>
+    </button>
     </div>
 </div>

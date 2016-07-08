@@ -36,7 +36,7 @@ class Plugin extends PluginBase
     public function registerNavigation()
     {
         return [
-            'sliders' => [
+            'rjsliders' => [
                 'label'       => 'raviraj.rjsliders::lang.menu.name',
                 'url'         => Backend::url('raviraj/rjsliders/sliders'),
                 'icon'        => 'icon-play-circle-o',
