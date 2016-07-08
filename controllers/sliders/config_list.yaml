@@ -3,7 +3,7 @@
 # ===================================
 
 # Model List Column configuration
-list: ~/plugins/raviraj/rjsliders/models/slider/columns.yaml
+list: $/raviraj/raviraj/rjsliders/models/slider/columns.yaml
 
 # Model Class name
 modelClass: Raviraj\Rjsliders\Models\Slider
