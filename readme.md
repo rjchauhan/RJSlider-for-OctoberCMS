@@ -1,7 +1,8 @@
 #Jssor Slider Plugin for OctoberCMS
 Create a slideshow in your website using **high performance**, touch responsive sliders.
+and give your slideshow a new and attractive look..
 
-####Features
+####Just check out the exciting features: 
 * **Touch responsive**
 * **Light weight**
 * **No JQuery** used
